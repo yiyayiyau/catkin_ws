@@ -1,0 +1,8 @@
+prefix=/home/heng/catkin_ws/devel
+
+Name: ros_test_pkg
+Description: Description of ros_test_pkg
+Version: 0.0.0
+Cflags: -I/home/heng/catkin_ws/src/ros_test_pkg/include
+Libs: -L${prefix}/lib -lros_test_pkg
+Requires: roscpp std_msgs

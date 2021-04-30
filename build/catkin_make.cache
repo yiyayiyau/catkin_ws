@@ -1,0 +1,2 @@
+ros_test_pkg
+-DCATKIN_DEVEL_PREFIX=/home/heng/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/heng/catkin_ws/install -G Unix Makefiles
