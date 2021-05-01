@@ -1,10 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import rospy
 from geometry_msgs.msg import Twist
 
-def velocity_publisher():
-    rospy.init_node('velocity_publisher', anonymous=True)
 
-    turtle_vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
+def velocity_publisher():
+    rospy.init_node("velocity_publisher", anonymous=True)
+
+    turtle_vel_pub = rospy.Publisher("/turtle1/cmd_vel", Twist, queue_size=10)
 
     rate = rospy.Rate(10)
 
@@ -14,11 +18,15 @@ def velocity_publisher():
         vel_msg.angular.z = 0.2
 
         turtle_vel_pub.publish(vel_msg)
-        rospy.loginfo("Publish turtle velocity command python[%0.2f m/s, %0.2f rad/s]",\
-                    vel_msg.linear.x,vel_msg.angular.z)
+        rospy.loginfo(
+            "Publish turtle velocity command python[%0.2f m/s, %0.2f rad/s]",
+            vel_msg.linear.x,
+            vel_msg.angular.z,
+        )
         rate.sleep()
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     try:
         velocity_publisher()
     except rospy.ROSInterruptException:

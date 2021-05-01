@@ -3,6 +3,7 @@
 
 void poseCallback(const turtlesim::Pose::ConstPtr& msg){
     ROS_INFO("Turtle pose: x:%0.6f, y:%0.6f", msg->x, msg->y);
+    // ROS_INFO("Turtle pose: x:%0.6f, y:%0.6f", msg->angular_velocity, msg->linear_velocity);
 }
 
 int main(int argc, char **argv){
