@@ -232,6 +232,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "ros_test_pkg/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "ros_test_pkg/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "ros_test_pkg/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "learning_topic/CMakeFiles/pose_subscriber.dir/DependInfo.cmake"
   "learning_topic/CMakeFiles/velocity_publisher.dir/DependInfo.cmake"
   "learning_topic/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake"
   "learning_topic/CMakeFiles/turtlesim_generate_messages_cpp.dir/DependInfo.cmake"

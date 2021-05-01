@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+learning_topic/CMakeFiles/pose_subscriber.dir/rule:
+	cd /home/heng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/pose_subscriber.dir/rule
+.PHONY : learning_topic/CMakeFiles/pose_subscriber.dir/rule
+
+# Convenience name for target.
+pose_subscriber: learning_topic/CMakeFiles/pose_subscriber.dir/rule
+
+.PHONY : pose_subscriber
+
+# fast build rule for target.
+pose_subscriber/fast:
+	cd /home/heng/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pose_subscriber.dir/build.make learning_topic/CMakeFiles/pose_subscriber.dir/build
+.PHONY : pose_subscriber/fast
+
+# Convenience name for target.
 learning_topic/CMakeFiles/velocity_publisher.dir/rule:
 	cd /home/heng/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 learning_topic/CMakeFiles/velocity_publisher.dir/rule
 .PHONY : learning_topic/CMakeFiles/velocity_publisher.dir/rule
@@ -407,6 +422,33 @@ std_srvs_generate_messages_lisp/fast:
 	cd /home/heng/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make learning_topic/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
 .PHONY : std_srvs_generate_messages_lisp/fast
 
+src/pose_subscriber.o: src/pose_subscriber.cpp.o
+
+.PHONY : src/pose_subscriber.o
+
+# target to build an object file
+src/pose_subscriber.cpp.o:
+	cd /home/heng/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pose_subscriber.dir/build.make learning_topic/CMakeFiles/pose_subscriber.dir/src/pose_subscriber.cpp.o
+.PHONY : src/pose_subscriber.cpp.o
+
+src/pose_subscriber.i: src/pose_subscriber.cpp.i
+
+.PHONY : src/pose_subscriber.i
+
+# target to preprocess a source file
+src/pose_subscriber.cpp.i:
+	cd /home/heng/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pose_subscriber.dir/build.make learning_topic/CMakeFiles/pose_subscriber.dir/src/pose_subscriber.cpp.i
+.PHONY : src/pose_subscriber.cpp.i
+
+src/pose_subscriber.s: src/pose_subscriber.cpp.s
+
+.PHONY : src/pose_subscriber.s
+
+# target to generate assembly for a file
+src/pose_subscriber.cpp.s:
+	cd /home/heng/catkin_ws/build && $(MAKE) -f learning_topic/CMakeFiles/pose_subscriber.dir/build.make learning_topic/CMakeFiles/pose_subscriber.dir/src/pose_subscriber.cpp.s
+.PHONY : src/pose_subscriber.cpp.s
+
 src/velocity_publisher.o: src/velocity_publisher.cpp.o
 
 .PHONY : src/velocity_publisher.o
@@ -444,6 +486,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... pose_subscriber"
 	@echo "... velocity_publisher"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... install/local"
@@ -463,6 +506,9 @@ help:
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... src/pose_subscriber.o"
+	@echo "... src/pose_subscriber.i"
+	@echo "... src/pose_subscriber.s"
 	@echo "... src/velocity_publisher.o"
 	@echo "... src/velocity_publisher.i"
 	@echo "... src/velocity_publisher.s"

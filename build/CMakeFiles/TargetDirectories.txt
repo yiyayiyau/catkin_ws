@@ -63,6 +63,7 @@
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/rebuild_cache.dir
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/edit_cache.dir
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/test.dir
+/home/heng/catkin_ws/build/learning_topic/CMakeFiles/pose_subscriber.dir
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/velocity_publisher.dir
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/std_srvs_generate_messages_py.dir
 /home/heng/catkin_ws/build/learning_topic/CMakeFiles/install/local.dir

@@ -139,6 +139,9 @@ include_directories(
 add_executable(velocity_publisher
   src/velocity_publisher.cpp
 )
+add_executable(pose_subscriber
+  src/pose_subscriber.cpp
+)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -153,7 +156,9 @@ add_executable(velocity_publisher
 target_link_libraries(velocity_publisher
   ${catkin_LIBRARIES}
 )
-
+target_link_libraries(pose_subscriber
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
