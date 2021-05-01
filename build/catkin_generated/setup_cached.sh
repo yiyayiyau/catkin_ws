@@ -7,5 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig'
+export PATH='/opt/ros/noetic/bin:/home/heng/anaconda3/condabin:/home/heng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
 export PWD='/home/heng/catkin_ws/build'
