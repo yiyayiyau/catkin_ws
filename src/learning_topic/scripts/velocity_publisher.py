@@ -14,7 +14,7 @@ def velocity_publisher():
         vel_msg.angular.z = 0.2
 
         turtle_vel_pub.publish(vel_msg)
-        rospy.loginfo("Publish turtle velocity command[%0.2f m/s, %0.2f rad/s]",\
+        rospy.loginfo("Publish turtle velocity command python[%0.2f m/s, %0.2f rad/s]",\
                     vel_msg.linear.x,vel_msg.angular.z)
         rate.sleep()
 

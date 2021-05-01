@@ -18,7 +18,7 @@ int main(int argc, char **argv)
         vel_msg.angular.z = 0.2;
 
         turtle_vel_pub.publish(vel_msg);
-        ROS_INFO("Publish turtle velocity command python [%0.2f m/s, %0.2f rad/s]",
+        ROS_INFO("Publish turtle velocity command c++ [%0.2f m/s, %0.2f rad/s]",
                  vel_msg.linear.x, vel_msg.angular.z);
 
         loop_rate.sleep();
