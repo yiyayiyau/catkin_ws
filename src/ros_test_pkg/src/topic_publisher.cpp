@@ -1,6 +1,8 @@
 #include "ros/ros.h"
 #include "std_msgs/Int32.h"
 
+/* Publisher: increase of a number
+*/
 int main(int argc, char **argv){
     ros::init(argc, argv, "topic_publisher"); // uint32_t => 4 Bytes; def a node
     ros::NodeHandle node_handle;

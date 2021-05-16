@@ -1,6 +1,8 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 
+/* publisher: the velocity of a turtle
+*/
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "velocity_publisher");

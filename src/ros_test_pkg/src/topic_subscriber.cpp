@@ -5,6 +5,8 @@ void num_callback(const std_msgs::Int32::ConstPtr& msg){
     ROS_INFO("Get Topic Msg: [%d]", msg->data);
 }
 
+/* Subscriber: increase of the number
+*/
 int main(int argc, char **argv){
     ros::init(argc, argv, "topic_subscriber");
     ros::NodeHandle node_handle;
