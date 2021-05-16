@@ -140,6 +140,11 @@ add_executable(turtle_spawn src/turtle_spawn.cpp)
 target_link_libraries(turtle_spawn
   ${catkin_LIBRARIES}
 )
+# service
+add_executable(turtle_command_server src/turtle_command_server.cpp)
+target_link_libraries(turtle_command_server
+  ${catkin_LIBRARIES}
+)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
