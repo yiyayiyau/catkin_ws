@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   turtlesim
+  message_generation # for srv
 )
 
 ## System dependencies are found with CMake's conventions
@@ -56,11 +57,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(
+  FILES
+  Person.srv
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -70,10 +70,11 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   std_msgs
-# )
+generate_messages(
+  DEPENDENCIES
+  #geometry_msgs
+  std_msgs # for srv
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -107,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES learning_service
-#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs turtlesim
+  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs turtlesim message_runtime
 #  DEPENDS system_lib
 )
 
@@ -145,6 +146,19 @@ add_executable(turtle_command_server src/turtle_command_server.cpp)
 target_link_libraries(turtle_command_server
   ${catkin_LIBRARIES}
 )
+
+add_executable(person_client src/person_client.cpp)
+target_link_libraries(person_client
+  ${catkin_LIBRARIES}
+)
+add_dependencies(person_client ${PROJECT_NAME}_gencpp)
+
+add_executable(person_server src/person_server.cpp)
+target_link_libraries(person_server
+  ${catkin_LIBRARIES}
+)
+add_dependencies(person_server ${PROJECT_NAME}_gencpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
