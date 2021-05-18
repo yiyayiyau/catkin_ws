@@ -19,6 +19,10 @@ def parameter_config():
     rospy.set_param("/turtlesim/background_g", 255)
     rospy.set_param('/turtlesim/background_b', 255)
 
+    red = rospy.get_param('/turtlesim/background_r')
+    green = rospy.get_param('/turtlesim/background_g')
+    blue = rospy.get_param("/turtlesim/background_b")
+
     rospy.loginfo("Re-Get Background Color[%d %d %d]", red, green, blue)
 
     rospy.wait_for_service('/clear')
